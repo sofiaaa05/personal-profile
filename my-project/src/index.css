@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Use Poppins (from Figma) as the default UI font */
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color tokens to align with Figma */
+  --color-primary: #7755FF; /* purple */
+  --color-accent-pink: #FF54B0;
+  --color-accent-yellow: #FFE978;
+  --color-heading: #1E1E2F;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: color-mix(in srgb, var(--color-primary) 75%, black);
+}
+
+/* Keep body as normal document flow so individual sections/components
+   can control their own layout (centering, full-height, etc.).
+   Removing `display:flex` prevents global centering that breaks responsiveness. */
+body {
+  margin: 0;
+  min-width: 320px;
+  /* If you want a site-wide centered container, prefer using a wrapper div
+     (e.g. <main class="mx-auto max-w-7xl">) inside App, not body {display:flex}. */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* headings use the Figma heading color */
+h1, h2, h3 {
+  color: var(--color-heading);
+  font-weight: 800;
+}
+
+/* Hover effect for text: color change + subtle shadow (used for navbar links) */
+.text-hover-effect {
+  transition: color 200ms ease, text-shadow 200ms ease, transform 150ms ease;
+  will-change: color, text-shadow, transform;
+}
+.text-hover-effect:hover,
+.text-hover-effect:focus,
+.text-hover-effect:focus-visible,
+.text-hover-effect:active {
+  /* on interaction: change color to blue and add subtle shadow + lift */
+  color: #646cff;
+  text-shadow: 0 10px 30px rgba(100,108,255,0.12);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/*contact me*/
+
+.contact {
+  background-color: #f5e8ff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+}
+
+.contact p {
+  color: #5c5c5c;
+  max-width: 500px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.5;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-left: 4rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+
+.contact-item .icon {
+  color: #9d5cff;
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.social-icons svg {
+  font-size: 1.5rem;
+  color: #9d5cff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons svg:hover {
+  transform: scale(1.1);
+}
+
+.contact-form form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #b3b3b3;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-form button {
+  background: linear-gradient(to right, #b84eff, #ff48b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+.error {
+  color: #ff5a5a;
+  font-size: 0.85rem;
+  text-align: left;
+  margin-top: -6px;
+}
