@@ -11,10 +11,9 @@ const ProfileCard = () => {
   return React.createElement(
     'section',
     {
-      // Make full-viewport height only on md+ screens to avoid very tall mobile layout
       className: "md:min-h-screen w-full bg-gradient-to-r from-[#E0EAFE] to-[#F9E5FF] pt-16 md:pt-28 pb-16 md:pb-40 flex flex-col items-center justify-center"
     },
-    // Catatan responsivitas: Tailwind mobile-first. Gunakan sm:, md:, lg: untuk rules di atas breakpoint.
+    
     React.createElement(
       'div',
       { className: "max-w-7xl mx-auto flex flex-col lg:flex-row items-start px-6 sm:px-12 md:px-20 gap-x-24 gap-y-8 lg:gap-y-0" },
@@ -24,7 +23,6 @@ const ProfileCard = () => {
           'div',
           { className: "w-full lg:w-1/2 max-w-2xl text-left", key: "left" },
           [
-            // small intro text: use Figma purple and Poppins (font-weight 700 / bold)
             React.createElement('p', { className: "text-[#7755FF] mb-2 font-bold text-sm", key: "intro" }, "Hello, I'm Sofia Nugraheni"),
             React.createElement(
               'h1',
@@ -143,7 +141,7 @@ const ProfileCard = () => {
             'div',
             { className: "relative overflow-visible" },
             [
-              // decorative gradient circle matching Figma inspect: linear gradient inside a 192x192 circle, 20% opacity, offset -24px
+             
               React.createElement('div', {
                 key: "circle",
                 className: "absolute -top-6 -left-6 w-48 h-48 rounded-full z-0 pointer-events-none",

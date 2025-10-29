@@ -49,7 +49,6 @@ function SkillsSection() {
       "My Skills"
     ),
 
-    // Grid Card (mobile-first): 1 col mobile, 2 cols small, 3 cols md, 4 cols lg
     React.createElement(
       "div",
       {
@@ -61,10 +60,8 @@ function SkillsSection() {
           "div",
           {
             key: i,
-            // make card fluid on mobile (full width up to a max), fixed width on md+
             className: `w-full max-w-xs md:w-60 min-h-[10rem] p-6 ${skill.bg} ${skill.border} border rounded-2xl shadow-sm flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300`,
           },
-          // icon: ensure responsive sizing - preserve original color class if present
           React.cloneElement(skill.icon, {
             className: `${skill.icon && skill.icon.props && skill.icon.props.className ? skill.icon.props.className + ' ' : ''}w-8 h-8 md:w-10 md:h-10 mb-3`,
           }),

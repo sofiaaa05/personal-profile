@@ -37,9 +37,6 @@ function PortfolioSection() {
         "py-20 px-6 md:px-20 bg-gradient-to-b from-white to-pink-50 text-center",
       style: { fontFamily: "Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif" },
     },
-    // Tailwind breakpoints: mobile-first -> use sm: md: lg: for larger screens
-    // contoh: flex flex-col md:flex-row (kolom di mobile, baris di md+)
-    // Judul
     React.createElement(
       "h2",
       {
